@@ -46,7 +46,7 @@ rabbitmq:
   ## Node port
   ## ref: https://github.com/bitnami/bitnami-docker-rabbitmq#environment-variables
   ##
-  nodePort: 5672
+  nodePort: 31672
 
   ## Node name to cluster with. e.g.: `clusternode@hostname`
   ## ref: https://github.com/bitnami/bitnami-docker-rabbitmq#environment-variables
@@ -83,7 +83,7 @@ rabbitmq:
       loopback_users.guest = false
 
 ## Kubernetes service type
-serviceType: ClusterIP
+serviceType: NodePort
 
 persistence:
   ## this enables PVC templates that will create one per pod
